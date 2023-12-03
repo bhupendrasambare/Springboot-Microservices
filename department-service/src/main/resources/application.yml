@@ -1,0 +1,16 @@
+server:
+  port: 9001
+
+spring:
+  datasource:
+    url: jdbc:h2:file:./department
+    driver-class-name: org.h2.Driver
+    username: root
+    password: password
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
