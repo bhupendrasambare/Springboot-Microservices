@@ -28,7 +28,8 @@ public class UsersService {
             UsersDto dto = new UsersDto(user);
             if(dto.getDepartmentId()!=null){
                 try{
-                    DepartmentDto department = restTemplate.getForObject("http://localhost:9001/department/find-by-id?id="+dto.getDepartmentId(), DepartmentDto.class);
+
+                    DepartmentDto department = restTemplate.getForObject("http://DEPARTMENT-SERVICE/department/find-by-id?id="+dto.getDepartmentId(), DepartmentDto.class);
                     dto.setDepartment(department);
                 }catch (Exception e){
                     log.error("Error getting department with id "+dto.getDepartmentId()+" "+e.getMessage());
