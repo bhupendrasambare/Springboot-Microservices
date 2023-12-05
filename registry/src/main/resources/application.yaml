@@ -5,3 +5,8 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: true
+
+#spring:
+#  cloud:
+#    compatibility-verifier:
+#      enabled: false
